@@ -1,0 +1,6 @@
+# Install chromadb
+%pip install chromadb
+
+# Install sentence transformers
+# This is used to convert text to vector embeddings. In other words, it converts text to a bunch of numbers that represent the 'meaning' of the text.
+%pip install -U sentence-transformers
