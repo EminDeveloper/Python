@@ -1,13 +1,18 @@
-import pymongo
+from pymongo import MongoClient
 
-# Establish a connection to MongoDB
-client = pymongo.MongoClient("mongodb://localhost:27017/")  # Replace with your MongoDB connection string
+# Provide the connection details
+hostname = 'localhost'
+port = 27017  # Default MongoDB port
+username = 'rootuser'  # If authentication is required
+password = 'rootpass'  # If authentication is required
 
+# Create a MongoClient instance
+client = MongoClient(hostname, port, username=username, password=password)
 # Create or access a database
-db = client["mydatabase"]  # Replace "mydatabase" with your database name
+db = client["applogdb"]  # Replace "mydatabase" with your database name
 
 # Create or access a collection
-collection = db["logs"]  # Replace "logs" with your collection name
+collection = db["allLogCollection"]  # Replace "logs" with your collection name
 
 # Data to be logged
 log_data = {
@@ -18,8 +23,11 @@ log_data = {
 # Insert the log data into the collection
 insert_result = collection.insert_one(log_data)
 
+
 # Check if the insertion was successful
 if insert_result.acknowledged:
     print("Log inserted successfully. ObjectId:", insert_result.inserted_id)
 else:
     print("Log insertion failed.")
+
+client.close()

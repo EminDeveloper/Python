@@ -95,3 +95,13 @@ Example collection format:
 ```
 
 
+
+### Simple Connection post in medium:
+
+[connect mongoDB with Python](https://levelup.gitconnected.com/how-to-connect-python-with-mongodb-350ebcc94efd)
+
+
+### Connection post geeksforgeeks:
+[geeksforgeeks link](https://www.geeksforgeeks.org/mongodb-and-python/)
+
+
