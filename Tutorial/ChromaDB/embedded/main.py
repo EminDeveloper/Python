@@ -2,7 +2,7 @@ import spacy
 
 nlp = spacy.load("en_core_web_md")
 
-dog_embedding = nlp.vocab["dog"].vector
+dog_embedding = nlp.vocab["Emin"].vector
 
 type(dog_embedding)
 
