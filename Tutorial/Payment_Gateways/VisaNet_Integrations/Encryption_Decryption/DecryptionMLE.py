@@ -18,7 +18,6 @@ class DecryptionMLE:
         if type(encPayload) is str:
             payload = json.loads(encPayload)
         if payload.get('encData', False):
-            config = Configuration()
             jwetoken = jwe.JWE()
             jwetoken.deserialize(payload["encData"], key=self.loadPem(modified_path))
             return json.dumps(json.loads(jwetoken.payload))
@@ -31,10 +30,5 @@ class DecryptionMLE:
 
 class Configuration:
     def __init__(self):
-        self.api_key = {
-            'keyId': '28352508-7a25-4116-b7c8-aeaeb79572de'
-        }
-
-        self.decryption_private_key_path = 'D:\\Rabbit\\YIGIM\\Work\\Magnet\\Original_Area\\Java_8\\Adapters\\Visa\\certificate\\v2\\original\\MLE\\pemiko\\mle-server.pem'
+        self.decryption_private_key_path = 'D:\\Rabbit\\YIGIM\\Work\\Magnet\\Original_Area\\Java_8\\Adapters\\Visa\\certificate\\v2\\original\\MLE\\mle-key.pem'
         # Add other configuration parameters as needed
-

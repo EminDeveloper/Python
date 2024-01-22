@@ -2,11 +2,11 @@
 from DecryptionMLE import DecryptionMLE
 
 # Create an instance of the EncryptionMLE class
-encryption_instance = DecryptionMLE()
+decryption_instance = DecryptionMLE()
 
 # Example of using the decrypt method
 encrypted_payload = '{"encData": "eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzA1NjYxNjIxNDc3LCJraWQiOiIyODM1MjUwOC03YTI1LTQxMTYtYjdjOC1hZWFlYjc5NTcyZGUifQ.fPgH2zxKrI2D00tQb8i7ERoWFQ8wwu8ZffyeRwvR62eEn70QyX342XhtzBLYIw6lIp-73rvw13ycrYpkwXweID7PzV8RTqf7wIs63Jd0Dc4oIHlZ36YYjRk2SSXX050Wm8rsl_Dc7TgFLtR4SDyEr5TF_sl1DmvFmb-Hz081_vcXmbY18DQ_EVG8CqtmVES5EKU7Eld40q9cdtYeXlBUVd2i66HW_IbK4kMCLJS5W4unVcpBTiQEd6jnRDD1QEQq_mNDLCCIyoU9eiIEZbHOariS8t2G8cQ7C8VE0QfwOjhqJ1jsUMFK0C3p0IlSAV9DQz-f1oP8Q32tzDaC767sdw.LqdZe_sEPlGiKzoo.RjzE6LwPe61UzKXaq6frSP0B6X9_etRi6_yz8xKMlcyNT7RwO1avdeQIb7I.WbC2I996Fm40H006_veJGw"}'
-decrypted_payload = encryption_instance.decrypt(encrypted_payload)
+decrypted_payload = decryption_instance.decrypt(encrypted_payload)
 
 # Print the decrypted payload
 print("Decrypted Payload:", decrypted_payload)
