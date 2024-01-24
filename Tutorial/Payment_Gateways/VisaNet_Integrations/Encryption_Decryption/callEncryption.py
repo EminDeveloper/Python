@@ -1,5 +1,5 @@
 # Import the required modules and classes
-from Tutorial.Payment_Gateways.VisaNet_Integrations.Encryption_Decryption.EncryptionMLE import EncryptionMLE  # Assuming the code is in a file named EncryptionMLE.py
+from EncryptionMLE import EncryptionMLE  # Assuming the code is in a file named EncryptionMLE.py
 
 # Create an instance of the EncryptionMLE class
 encryption_instance = EncryptionMLE()
