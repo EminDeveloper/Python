@@ -1,0 +1,17 @@
+-- Step 1: Add the new column without a default value
+ALTER TABLE Users
+ADD COLUMN created_at TIMESTAMP;
+
+-- Step 2: Update existing records to set the current timestamp
+UPDATE Users
+SET created_at = CURRENT_TIMESTAMP
+WHERE created_at IS NULL;
+
+-- Step 3 (Optional): Create a trigger to set the default value for new records
+CREATE TRIGGER set_created_at
+AFTER INSERT ON Users
+FOR EACH ROW
+WHEN NEW.created_at IS NULL
+BEGIN
+    UPDATE Users SET created_at = CURRENT_TIMESTAMP WHERE rowid = NEW.rowid;
+END;

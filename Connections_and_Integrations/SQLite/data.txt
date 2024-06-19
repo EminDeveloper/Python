@@ -1,0 +1,16 @@
+INSERT INTO Users (username, email, age) VALUES ('john_doe', 'john.doe@example.com', 25);
+INSERT INTO Users (username, email, age) VALUES ('jane_smith', 'jane.smith@example.com', 30);
+INSERT INTO Users (username, email, age) VALUES ('alice_jones', 'alice.jones@example.com', 22);
+INSERT INTO Users (username, email, age) VALUES ('bob_brown', 'bob.brown@example.com', 28);
+INSERT INTO Users (username, email, age) VALUES ('charlie_clark', 'charlie.clark@example.com', 35);
+INSERT INTO Users (username, email, age) VALUES ('daisy_davis', 'daisy.davis@example.com', 24);
+INSERT INTO Users (username, email, age) VALUES ('edward_evans', 'edward.evans@example.com', 27);
+INSERT INTO Users (username, email, age) VALUES ('fiona_franklin', 'fiona.franklin@example.com', 29);
+INSERT INTO Users (username, email, age) VALUES ('george_green', 'george.green@example.com', 31);
+INSERT INTO Users (username, email, age) VALUES ('hannah_harris', 'hannah.harris@example.com', 26);
+INSERT INTO Users (username, email, age) VALUES ('ian_irwin', 'ian.irwin@example.com', 32);
+INSERT INTO Users (username, email, age) VALUES ('julia_jackson', 'julia.jackson@example.com', 23);
+INSERT INTO Users (username, email, age) VALUES ('kevin_kelly', 'kevin.kelly@example.com', 34);
+INSERT INTO Users (username, email, age) VALUES ('laura_lawrence', 'laura.lawrence@example.com', 21);
+INSERT INTO Users (username, email, age) VALUES ('michael_miller', 'michael.miller@example.com', 33);
+INSERT INTO Users (username, email, age) VALUES ('dumb_ku', 'dumbulku.dumbulku@example.com', null);
