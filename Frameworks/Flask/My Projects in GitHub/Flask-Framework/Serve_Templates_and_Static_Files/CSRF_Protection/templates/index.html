@@ -1,0 +1,19 @@
+<html> 
+<head></head> 
+<body> 
+<form action="{{ url_for('protected_form') }}" method="POST"> 
+	<label for="Name">Your Name Please ? </label> 
+	<input type="text" name="Name"> 
+	<input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" /> 
+	<button type="submit">Submit</button> 
+</form> 
+
+
+<form action="{{ url_for('unprotected_form') }}" method="POST"> 
+	<label for="Name">Your Name Please ? </label> 
+	<input type="text" name="Name"> 
+	<button type="submit">Submit</button> 
+</form> 
+
+</body> 
+</html>

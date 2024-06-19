@@ -1,0 +1,10 @@
+<!-- index_template.html -->
+
+Hello {{pl_name}}! Your email is: {{pl_email}} 
+<br> 
+Even numbers: 
+{% for i in numbers %} 
+	{% if i%2==0 %} 
+		{{i}} 
+	{% endif %} 
+{% endfor %} 
