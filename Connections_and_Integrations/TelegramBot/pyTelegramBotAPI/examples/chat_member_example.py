@@ -1,7 +1,10 @@
 import telebot
-from telebot import types,util
+from telebot import types, util
 
-bot = telebot.TeleBot("token")
+from config import telegram_token
+
+bot = telebot.TeleBot(telegram_token)
+
 
 #chat_member_handler. When status changes, telegram gives update. check status from old_chat_member and new_chat_member.
 @bot.chat_member_handler()
@@ -9,7 +12,8 @@ def chat_m(message: types.ChatMemberUpdated):
     old = message.old_chat_member
     new = message.new_chat_member
     if new.status == "member":
-        bot.send_message(message.chat.id,"Hello {name}!".format(name=new.user.first_name)) # Welcome message
+        bot.send_message(message.chat.id, "Hello {name}!".format(name=new.user.first_name))  # Welcome message
+
 
 #if bot is added to group, this handler will work
 @bot.my_chat_member_handler()
@@ -17,8 +21,9 @@ def my_chat_m(message: types.ChatMemberUpdated):
     old = message.old_chat_member
     new = message.new_chat_member
     if new.status == "member":
-        bot.send_message(message.chat.id,"Somebody added me to group") # Welcome message, if bot was added to group
+        bot.send_message(message.chat.id, "Somebody added me to group")  # Welcome message, if bot was added to group
         bot.leave_chat(message.chat.id)
+
 
 #content_Type_service is:
 #'new_chat_members', 'left_chat_member', 'new_chat_title', 'new_chat_photo', 'delete_chat_photo', 'group_chat_created',
@@ -29,5 +34,7 @@ def my_chat_m(message: types.ChatMemberUpdated):
 
 @bot.message_handler(content_types=util.content_type_service)
 def delall(message: types.Message):
-    bot.delete_message(message.chat.id,message.message_id)
+    bot.delete_message(message.chat.id, message.message_id)
+
+
 bot.infinity_polling(allowed_updates=util.update_types)

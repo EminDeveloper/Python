@@ -23,8 +23,7 @@ from telebot.storage import StateMemoryStorage
 # Now, you can pass storage to bot.
 state_storage = StateMemoryStorage() # you can init here another storage
 
-bot = telebot.TeleBot("TOKEN",
-state_storage=state_storage)
+bot = telebot.TeleBot("TOKEN", state_storage=state_storage)
 
 
 # States group.

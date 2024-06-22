@@ -108,7 +108,7 @@ def stop(message: types.Message):
 #
 # That handler needed to send message from one opponent to another
 # If you are not in `users`, you will recieve a message 'No one can hear you...'
-# Otherwise all your messages are sent to your opponent
+# Otherwise, all your messages are sent to your opponent
 #
 # Questions:
 # 1. Is there any way to improve readability like `content_types=['all']`?

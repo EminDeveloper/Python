@@ -1,13 +1,16 @@
 from telebot import TeleBot
 from telebot.handler_backends import ContinueHandling
 
+from config import telegram_token
 
-bot = TeleBot('TOKEN')
+bot = TeleBot(telegram_token)
+
 
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id, 'Hello World!')
     return ContinueHandling()
+
 
 @bot.message_handler(commands=['start'])
 def start2(message):
@@ -18,6 +21,7 @@ def start2(message):
     If you return ContinueHandling() in the first handler, the next 
     registered handler with appropriate filters will be called.
     """
-    bot.send_message(message.chat.id, 'Hello World2!')
+    bot.send_message(message.chat.id, 'Hello World 2!')
+
 
 bot.infinity_polling()
